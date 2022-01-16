@@ -6,4 +6,5 @@ RUN apt-get install -y vim htop libpq-dev libonig-dev
 RUN docker-php-ext-install mbstring pdo_mysql opcache
 
 COPY ./conf/httpd.conf /usr/local/apache2/conf/
+COPY ./conf/hosts /etc/
 COPY ./conf/php.ini /usr/local/etc/php/
